@@ -1,14 +1,10 @@
-import DummyClass from "../src/crosslytics-browser-boilerplate-tracker"
+import { SampleTracker } from '../src/crosslytics-browser-boilerplate-tracker'
 
 /**
- * Dummy test
+ * Tracker test
  */
-describe("Dummy test", () => {
-  it("works if true is truthy", () => {
-    expect(true).toBeTruthy()
-  })
-
-  it("DummyClass is instantiable", () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
+describe('Tracker test', () => {
+  it('SampleTracker is instantiable', () => {
+    expect(new SampleTracker('accountId')).toBeInstanceOf(SampleTracker)
   })
 })
