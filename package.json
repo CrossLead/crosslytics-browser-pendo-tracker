@@ -1,5 +1,5 @@
 {
-  "name": "crosslytics-browser-boilerplate-tracker",
+  "name": "crosslytics-browser-pendo-tracker",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/CrossLead/crosslytics-browser-boilerplate-tracker.git"
+    "url": "https://github.com/CrossLead/crosslytics-browser-pendo-tracker.git"
   },
   "author": {
     "name": "Christian Yang",

@@ -1,10 +1,10 @@
-import { SampleTracker } from '../src'
+import { PendoTracker } from '../src'
 
 /**
  * Tracker test
  */
-describe('Tracker test', () => {
-  it('SampleTracker is instantiable', () => {
-    expect(new SampleTracker('accountId')).toBeInstanceOf(SampleTracker)
+describe('PendoTracker tests', () => {
+  it('PendoTracker should throw if window context invalid', () => {
+    expect(() => new PendoTracker('accountId')).toThrow()
   })
 })
