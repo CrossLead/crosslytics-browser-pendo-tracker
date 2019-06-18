@@ -1,4 +1,5 @@
 import { Identity, Page, TrackedEvent, Tracker } from 'crosslytics'
+import * as Pendo from '../tools/declarations'
 
 export class PendoTracker implements Tracker {
   /**
@@ -45,8 +46,8 @@ export class PendoTracker implements Tracker {
         y.async = !0
         y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js'
         z = e.getElementsByTagName(n)[0]
-        z.parentNode && z.parentNode.insertBefore(y, z)
-      })(window, document, 'script', 'pendo')
+        z && z.parentNode && z.parentNode.insertBefore(y, z)
+      })(pendoWindow, pendoWindow.document, 'script', 'pendo')
       // tslint:enable
 
       // Anonymous to start
@@ -84,13 +85,8 @@ export class PendoTracker implements Tracker {
     return
   }
 
-  /**
-   * Pendo currently does not support custom event tracking,
-   * so this method is a noop.
-   * @param event 
-   */
   public async track<T>(event: TrackedEvent<T>) {
-    return
+    this.w.pendo.track(event.name, event.args)
   }
 }
 
