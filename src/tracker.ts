@@ -31,7 +31,7 @@ export class PendoTracker implements Tracker {
         var v: any, w, x, y, z
         o = p[d] = p[d] || {}
         o._q = []
-        v = ['initialize', 'identify', 'updateOptions', 'pageLoad']
+        v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']
         for (w = 0, x = v.length; w < x; ++w)
           (function(m) {
             o[m] =
